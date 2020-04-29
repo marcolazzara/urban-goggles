@@ -8,10 +8,10 @@ import javax.persistence.*;
 public class PostLike {
 	@Id
 	@GeneratedValue
-	private Long id;
-	private Person author;
-	private Post post;
-	private Date date;
+	private Long		id;
+	private Person	author;
+	private Post		post;
+	private Date		date;
 
 	public PostLike() {
 	}
@@ -47,5 +47,7 @@ public class PostLike {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	
+	
 
 }

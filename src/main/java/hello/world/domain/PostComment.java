@@ -8,11 +8,11 @@ import javax.persistence.*;
 public class PostComment {
 	@Id
 	@GeneratedValue
-	private Long id;
-	private Person author;
-	private Post post;
-	private Date date;
-	private String message;
+	private Long		id;
+	private Person	author;
+	private Post		post;
+	private Date		date;
+	private String	message;
 
 	public PostComment() {
 	}

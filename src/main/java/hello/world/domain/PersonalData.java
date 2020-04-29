@@ -9,11 +9,11 @@ public class PersonalData {
 
 	@Id
 	@GeneratedValue
-	private Long id;
-	private String name;
-	private String surname;
-	private String avatar;
-	private Person person;
+	private Long		id;
+	private String	name;
+	private String	surname;
+	private String	avatar;
+	private Person	person;
 
 	public String getName() {
 		return name;

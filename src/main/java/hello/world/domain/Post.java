@@ -8,12 +8,12 @@ import javax.persistence.*;
 public class Post {
 	@Id
 	@GeneratedValue
-	private Long id;
-	private String title;
-	private String message;
-	private Person author;
-	private Integer numLikes;
-	private Date creationDate;
+	private Long		id;
+	private String	title;
+	private String	message;
+	private Person	author;
+	private Integer	numLikes;
+	private Date		creationDate;
 
 	public Post() {
 	}
