@@ -5,15 +5,16 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity
-public class PostLike {
+public class PostComment {
 	@Id
 	@GeneratedValue
 	private Long id;
 	private Person author;
 	private Post post;
 	private Date date;
+	private String message;
 
-	public PostLike() {
+	public PostComment() {
 	}
 
 	public Long getId() {
@@ -46,6 +47,14 @@ public class PostLike {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }
