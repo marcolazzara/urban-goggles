@@ -1,16 +1,8 @@
 micronaut:
-  application:
-    name: hello-world
-
-
----
-micronaut:
   security:
     enabled: true
     endpoints:
       login:
-        enabled: true
-      oauth:
         enabled: true
     token:
       jwt:
@@ -18,4 +10,6 @@ micronaut:
         signatures:
           secret:
             generator:
-              secret: "xyz"
+              secret: pleaseChangeThisSecretForANewOne123 
+              jws-algorithm: HS256 
+
