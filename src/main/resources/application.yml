@@ -1,0 +1,38 @@
+micronaut:
+  security:
+    enabled: true
+    endpoints:
+      login:
+        enabled: true
+    token:
+      jwt:
+        enabled: true
+        signatures:
+          secret:
+            generator:
+              secret: pleaseChangeThisSecretForANewOne123 
+              jws-algorithm: HS256 
+              access-token-expiration:  9400
+---
+datasources:
+  default:
+    url: jdbc:mysql://localhost:3306/db
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: rhodesia34
+    schema-generate: CREATE_DROP
+    jpa:
+      default:
+        entity-scan:
+            packages: 'hello.world.domain'
+#datasources:
+#  default:
+#    url: jdbc:mysql://localhost:3306/db
+#    driverClassName: com.mysql.jdbc.Driver
+#    username: root
+#    password: rhodesia34
+#    schema-generate: CREATE_DROP
+#    jpa:
+#      default:
+#    entity-scan:
+#        packages: 'hello.world.domain'
