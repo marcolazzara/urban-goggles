@@ -1,8 +1,10 @@
 package hello.world.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class PersonalData {
@@ -13,6 +15,7 @@ public class PersonalData {
 	private String	name;
 	private String	surname;
 	private String	avatar;
+	@OneToOne(fetch = FetchType.LAZY)
 	private Person	person;
 
 	public String getName() {

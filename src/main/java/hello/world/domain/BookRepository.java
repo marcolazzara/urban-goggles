@@ -1,7 +1,7 @@
-package hello.world.repository;
+package hello.world.domain;
 
-import hello.world.domain.Book;
-import io.micronaut.context.annotation.Prototype;
+import javax.transaction.Transactional;
+
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.repository.CrudRepository;
 

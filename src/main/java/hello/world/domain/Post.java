@@ -11,6 +11,7 @@ public class Post {
 	private Long		id;
 	private String	title;
 	private String	message;
+	@OneToOne(fetch = FetchType.LAZY)
 	private Person	author;
 	private Integer	numLikes;
 	private Date		creationDate;

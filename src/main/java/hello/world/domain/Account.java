@@ -6,12 +6,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import io.micronaut.data.annotation.GeneratedValue;
+import io.micronaut.data.annotation.Id;
 
 @Entity
 @Table(name = "ACCOUNT")
@@ -22,7 +23,7 @@ public class Account implements Serializable {
 	 */
 	private static final long	serialVersionUID	= -1369806756901572516L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	private Integer						id;
 	@Column(name = "password")
 	private String						password;
@@ -59,8 +60,8 @@ public class Account implements Serializable {
 	public void setPassword(String password) {
 		if (password != null && password.length() > 15)
 			this.password = password;
-//		else
-//			this.password = EncryptHelper.encode(password);
+		// else
+		// this.password = EncryptHelper.encode(password);
 	}
 
 	public String getUsername() {
@@ -86,7 +87,6 @@ public class Account implements Serializable {
 	public void setRole(AccountRole role) {
 		this.role = role;
 	}
-
 
 	@Override
 	public int hashCode() {

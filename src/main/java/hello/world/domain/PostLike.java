@@ -9,7 +9,9 @@ public class PostLike {
 	@Id
 	@GeneratedValue
 	private Long		id;
+	@OneToOne(fetch = FetchType.LAZY)
 	private Person	author;
+	@OneToOne(fetch = FetchType.LAZY)
 	private Post		post;
 	private Date		date;
 
